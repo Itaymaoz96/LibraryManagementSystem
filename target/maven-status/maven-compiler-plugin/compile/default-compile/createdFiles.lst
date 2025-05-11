@@ -1,9 +1,0 @@
-db\DatabaseManager.class
-Main.class
-models\Admin.class
-models\BorrowRecord.class
-utils\Security.class
-models\User.class
-models\Member.class
-gui\LibraryApp.class
-models\Book.class
