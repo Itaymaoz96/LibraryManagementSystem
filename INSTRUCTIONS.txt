@@ -1,0 +1,49 @@
+=========================================
+LIBRARY MANAGEMENT SYSTEM - SETUP GUIDE
+=========================================
+
+REQUIREMENTS:
+-------------
+- Java 17 or higher
+- Maven (for building & testing)
+- Internet connection (for Maven dependencies)
+
+STEPS TO RUN:
+-------------
+1. Open terminal / command line
+2. Navigate to the project root folder:
+   cd LibraryManagementSystem
+
+3. Build the project:
+   mvn clean compile
+
+4. Run the GUI app:
+   mvn exec:java -Dexec.mainClass="Main"
+
+5. Run tests (optional):
+   mvn test
+
+DEFAULT ADMIN LOGIN:
+--------------------
+Username: admin
+Password: admin123
+
+COMMON OPERATIONS:
+------------------
+- Add/delete books (admin only)
+- Borrow and return books (admin/member rules apply)
+- Search by author or category
+- View overdue books
+- Switch users via "Change User" button
+
+DATABASE:
+---------
+- Data is saved in a local SQLite file: library.db
+- To reset the database (e.g. for tests), run:
+  DatabaseManager.resetDatabase();
+
+NOTES:
+------
+- Books must have unique titles.
+- Members cannot return books they did not borrow.
+- Admins can borrow/return on behalf of others.
